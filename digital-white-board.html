@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <META name="author" content="ChatGPT, HFritz and SpankyJpn,">
+    <META name="description" content="WEBページをホワイトボードにするWebアプリ">
+    <title>Diving Instruction Whiteboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <select id="backgroundSelector">
+				<option value="">なし</option>
+                <option value="img/cw-background-1.jpg">限定水域1</option>
+                <option value="img/cw-background-2.jpg">限定水域2</option>
+                <option value="img/cw-background-3.jpg">限定水域3</option>
+                <option value="img/openwater-1.jpg">海洋1</option>
+                <option value="img/openwater-2.jpg">海洋2</option>
+            </select>
+            <div id="iconSelector">
+                <img src="img/examinar-1.png" alt="Icon 1" class="draggable" draggable="true">
+                <img src="img/diver-1.png" alt="Icon 2" class="draggable" draggable="true">
+                <img src="img/diver-2.png" alt="Icon 3" class="draggable" draggable="true">
+                <img src="img/Liftbag.png" alt="Icon 4" class="draggable" draggable="true">
+                <img src="img/diver-buoy.png" alt="Icon 5" class="draggable" draggable="true">
+                <img src="img/diver-3.png" alt="Icon 6" class="draggable" draggable="true">
+                <img src="img/diver-4.png" alt="Icon 7" class="draggable" draggable="true">
+                <img src="img/diver-5.png" alt="Icon 8" class="draggable" draggable="true">
+                <img src="img/diver-6.png" alt="Icon 9" class="draggable" draggable="true">
+                <img src="img/weight-belt.png" alt="Icon 10" class="draggable" draggable="true">
+                <img src="img/fish-1.png" alt="Icon 11" class="draggable" draggable="true">
+                <img src="img/seaweed-1.png" alt="Icon 12" class="draggable" draggable="true">
+                <img src="img/coral-1.png" alt="Icon 12" class="draggable" draggable="true">
+            </div>
+            <button id="clearAll">全消去</button>
+            <button id="eraseIcons">アイコンを消去</button>
+            <!-- テキスト入力フィールドとボタンを追加 -->
+            <input type="text" id="textInput" placeholder="表示するテキストを入力">
+            <input type="color" id="colorPicker" value="#ffff00"> <!-- カラーピッカーを追加 -->
+            <button id="addText">テキストを追加</button>
+        </div>
+        <div class="right-panel" id="mainCanvas">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

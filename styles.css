@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#mainCanvas {
+    background-size: 100%;  // 画像がコンテナの幅に合わせて拡大/縮小されるように設定
+    background-repeat: no-repeat;  // 画像が繰り返し表示されないように設定
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-panel {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right-panel {
+    flex-grow: 1;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    background-size: contain; /* 画像がパネルに収まるように調整 */
+    background-repeat: no-repeat; /* 画像が繰り返されないように設定 */
+    background-position: center; /* 画像をパネルの中心に配置 */
+}
+
+#iconSelector img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#iconSelector img:active {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
